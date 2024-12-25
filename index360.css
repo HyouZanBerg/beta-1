@@ -103,16 +103,16 @@
     .yinyang{
       float:right;
       position:absolute;
-      right:13.2vh;
+      right:13.5vh;
       cursor:pointer;
-      top:-0.8vh;
+      top:-0.9vh;
     }
     .se{
       cursor:pointer;
       float:right;
       position:absolute;
       right:7.4vh;
-      top:-2.7vh;
+      top:-3vh;
       font-size:9.6vh
     }
     .magContains{
