@@ -63,7 +63,7 @@
       float:right;
       position:absolute;
       right:-0.5vh;
-      top:-1vh;
+      top:0vh;
       cursor:pointer
     }
     .ham-content{
@@ -105,15 +105,15 @@
       position:absolute;
       right:15.2vh;
       cursor:pointer;
-      top:-0.9vh
+      top:-0.7vh;
     }
     .se{
       cursor:pointer;
       float:right;
       position:absolute;
       right:7.4vh;
-      top:-4vh;
-      font-size:10.6vh
+      top:-0.7vh;
+      font-size:8.2vh
     }
     .magContains{
       position:fixed;
