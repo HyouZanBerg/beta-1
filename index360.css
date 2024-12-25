@@ -39,7 +39,7 @@
       left:-1vh;
       top:-1.4vh;
       position:absolute;
-      font-size:7vh;
+      font-size:6.4vh;
       width:41vh;
       letter-spacing:-0.8vh;
       height:100%;
@@ -63,7 +63,7 @@
       float:right;
       position:absolute;
       right:-0.5vh;
-      top:-0.2vh;
+      top:-1vh;
       cursor:pointer
     }
     .ham-content{
@@ -103,17 +103,17 @@
     .yinyang{
       float:right;
       position:absolute;
-      right:12.2vh;
+      right:15.2vh;
       cursor:pointer;
-      top:-0.2vh
+      top:-0.9vh
     }
     .se{
       cursor:pointer;
       float:right;
       position:absolute;
-      right:6.2vh;
-      top:-1vh;
-      font-size:8.5vh
+      right:7.4vh;
+      top:-4vh;
+      font-size:10.6vh
     }
     .magContains{
       position:fixed;
