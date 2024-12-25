@@ -63,7 +63,7 @@
       float:right;
       position:absolute;
       right:-0.5vh;
-      top:0vh;
+      top:0.4vh;
       cursor:pointer
     }
     .ham-content{
@@ -105,7 +105,7 @@
       position:absolute;
       right:13.5vh;
       cursor:pointer;
-      top:-0.9vh;
+      top:0.4vh;
     }
     .se{
       cursor:pointer;
