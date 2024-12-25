@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=none">
+  <title>Day 45 website</title>
+  <link rel="stylesheet" media="screen and (min-width: 721px)" href="indexDesk.css">
+  <link rel="stylesheet" media="screen and (max-width: 361px)" href="index360.css">
+</head>
+<body> 
+    <div class="container">
+        <div class="header">
+            <div class="simbol">
+              <div id="h"><span class="koushiki">YukiHara公式</span><span class="saito"> ● サイト` </span></div>
+              <span class="se">⌕</span>
+              <span class="yinyang">☯</span>
+              <span class="ham-nav">☰</span>
+            </div>
+        </div>
+        <div class="nav"></div>
+        <div class="main">
+            <div class="ham-content">
+              <input type="text" name="search" id="search" placeholder="Search items...">
+              <ul id="listItem">
+                <li><a href="main.html">Main website</a></li>
+                <li><a href="none">item in list2</a></li>
+                <li><a href="none">item in list2</a></li>
+                <li><a href="none">item in list3</a></li>
+                <li><a href="none">item in list4</a></li>
+                <li><a href="none">item in list5</a></li>
+                <li><a href="none">item in list4</a></li>
+                <li><a href="none">item in list6</a></li>
+                <li><a href="none">item in list6</a></li>
+                <li><a href="none">item in list7</a></li>
+                <li><a href="none">item in list7</a></li>
+                <li><a href="none">item in list2</a></li>
+                <li><a href="none">item in list1</a></li>
+                <li><a href="none">item in list2</a></li>
+                <li><a href="none">item in list1</a></li>
+                <li><a href="none">item in list2</a></li>
+                <li><a href="none">item in list2</a></li>
+                <li><a href="none">item in list3</a></li>
+                <li><a href="none">item in list4</a></li>
+                <li><a href="none">item in list5</a></li>
+                <li><a href="none">item in list4</a></li>
+                <li><a href="none">item in list6</a></li>
+                <li><a href="none">item in list6</a></li>
+                <li><a href="none">item in list7</a></li>
+                <li><a href="none">item in list7</a></li>
+                <li><a href="none">item in list2</a></li>
+                <li><a href="none">item in list1</a></li>
+                <li><a href="none">item in list2</a></li>
+                <li><a href="none">item in list1</a></li>
+                <li><a href="none">item in list1</a></li>
+              </ul>
+            </div>
+            <div class="magContains">
+              <input id="magInput" type="text" placeholder="searching" name="magInput">
+              <ul id="magItem">
+                <li><a href="main.html">main website</a></li>
+                <li><a href="none">item in list2</a></li>
+                <li><a href="none">item in list2</a></li>
+                <li><a href="none">item in list3</a></li>
+                <li><a href="none">item in list4</a></li>
+                <li><a href="none">item in list5</a></li>
+                <li><a href="none">item in list4</a></li>
+                <li><a href="none">item in list6</a></li>
+                <li><a href="none">item in list6</a></li>
+                <li><a href="none">item in list7</a></li>
+                <li><a href="none">item in list7</a></li>
+                <li><a href="none">item in list2</a></li>
+                <li><a href="none">item in list1</a></li>
+                <li><a href="none">item in list2</a></li>
+                <li><a href="none">item in list1</a></li>
+              </ul>
+            </div>
+            <div class="slider">
+                <div class="slides">
+                  <div class="slide active"><img src="RobloxScreenShot20241114_211111548.png"></div>
+                  <div class="slide"><img src="RobloxScreenShot20241117_163436828.png"></div>
+                  <div class="slide"><img src="RobloxScreenShot20241122_191705752.png"></div>
+                  <div class="slide"><img src="RobloxScreenShot20241123_183452737.png"></div>
+                  <div class="slide"><img src="RobloxScreenShot20241122_191751114.png"></div>
+                  <div class="slide"><img src="RobloxScreenShot20241122_185127413.png"></div>
+                </div>
+                <button class="prev">❮ Prev</button>
+                <button class="next">Next ❯</button>
+              </div>
+            </div>
+            <div class="page2">
+              <h1>Welcome to My Long Journey!!</h1>
+              <p>
+                This is Day 45 of my web development journey.<br> I’ve learnt DOM, BOM, Async, and the last <b>API</b> in JavaScript. 
+                this is really a great experience for me, and I’m excited to share what I’ve created!
+              </p>
+              <a class="cta">See my current Project:(unavalaible)</a>
+            </div>
+            
+            <div class="page3">
+              <div class="page3-asideR"><img src="pfp.jpg">
+              </div>
+              <div class="page3-asideL">
+                <h1>This website was <br>
+                  created by :<br><br>
+                <span class="yukihara">雪原青葉❄</span><span id="or">/</span><span class="hyouzan">氷山※</span>
+                </h1>
+              </div>
+            </div>
+            <div class="page4">
+              <h1>My last front-end Website</h1>
+              <h2>
+                I will make a new website before i move into a new stage, <u>Back-End</u>.
+                wish a good luck for that
+              </h2>
+              <a class="butto" href="https://m1wdproject.vercel.app">Go to main Website</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+      const koushiki = document.getElementsByClassName("koushiki")[0];
+      koushiki.addEventListener('click',()=>{
+        open("index.html","_self")
+      })
+      //ham nav//
+      const hamNav = document.getElementsByClassName("ham-nav")[0];
+      const hamContent = document.getElementsByClassName('ham-content')[0];
+      hamNav.addEventListener('click',()=>{
+          if(hamContent.style.top == "-110vh"){
+            hamContent.style.top = "15vh"
+          }else{
+            hamContent.style.top = "-110vh"
+          }
+      })
+      const input = document.getElementById("search");
+      const listItems = document.querySelectorAll("#listItem li");
+  
+      input.addEventListener('input',()=>{
+        let searchs = input.value.toLowerCase();
+  
+        listItems.forEach(x => {
+          let text = x.textContent.toLowerCase();
+          x.style.display = text.includes(searchs) ? "" : "none"
+        })
+      })
+  
+      //untuk yin yang//
+      const trigger = document.getElementsByClassName("yinyang")[0];
+      let savedmode = localStorage.getItem("mode");
+      const header = document.getElementsByClassName("header")[0];
+      const simbol = document.getElementsByClassName("simbol")[0];
+      
+      trigger.addEventListener('click',()=>{
+        document.body.classList.toggle("lightMode");
+        header.classList.toggle("lightMode21")
+        simbol.classList.toggle("lightMode2")
+        document.getElementsByClassName("prev")[0].classList.toggle("lightMode3");
+        document.getElementsByClassName("next")[0].classList.toggle("lightMode3");
+        document.getElementsByClassName("slider")[0].classList.toggle("lightMode4");
+        document.getElementsByClassName("page2")[0].classList.toggle("lightmode5");
+        document.getElementsByClassName("page3")[0].classList.toggle("lightmode5");
+        document.getElementsByClassName("page4")[0].classList.toggle("lightmode5");
+        if(document.body.classList.contains("lightMode")){
+          localStorage.setItem("mode","light")
+        }else{
+          localStorage.setItem("mode","dark")
+        };
+      })
+      if(savedmode == "light"){
+        document.body.classList.add("lightMode");
+        header.classList.add("lightMode21");
+        simbol.classList.add("lightMode2");
+        document.getElementsByClassName("prev")[0].classList.add("lightMode3");
+        document.getElementsByClassName("next")[0].classList.add("lightMode3");
+        document.getElementsByClassName("slider")[0].classList.add("lightMode4");
+        document.getElementsByClassName("page2")[0].classList.add("lightmode5");
+        document.getElementsByClassName("page3")[0].classList.add("lightmode5");
+        document.getElementsByClassName("page4")[0].classList.add("lightmode5");
+  
+      }else{
+        document.body.classList.remove("lightMode");
+        header.classList.remove("lightMode21");
+        simbol.classList.remove("lightMode2");
+        document.getElementsByClassName("prev")[0].classList.remove("lightMode3");
+        document.getElementsByClassName("next")[0].classList.remove("lightMode3");
+        document.getElementsByClassName("slider")[0].classList.remove("lightMode4");
+        document.getElementsByClassName("page2")[0].classList.remove("lightmode5");
+        document.getElementsByClassName("page3")[0].classList.remove("lightmode5");
+        document.getElementsByClassName("page4")[0].classList.remove("lightmode5");
+  
+      }
+  
+      //untuk searching
+      const magnifying = document.getElementsByClassName("se")[0]; //tombol
+      const magContain = document.getElementsByClassName("magContains")[0] ; //kontainer//
+      const magInput = document.getElementById("magInput");//baru input
+      const magList = document.querySelectorAll("#magItem li");
+  
+      magnifying.addEventListener('click',()=>{
+        if(magContain.style.right ==  "-180px"){
+          magContain.style.right = "15px"
+        }else{
+          magContain.style.right = "-180px"
+        }
+      });
+  
+      magInput.addEventListener('input',()=>{
+        let search = magInput.value.toLowerCase();
+  
+        magList.forEach(li => {
+          let text = li.textContent.toLowerCase();
+          li.style.display = text.includes(search) ? "" : "none";
+        })
+        
+      })
+  
+      //slides
+          const slides = document.querySelectorAll('.slide');
+      const next = document.querySelector('.next');
+      const prev = document.querySelector('.prev');
+  
+      let currentSlide = 0;
+  
+      function updateSlide() {
+      
+          slides.forEach((slide, index) => {
+          slide.classList.toggle('active', index === currentSlide);
+          });
+    
+          document.querySelector('.slides').style.transform = `translateX(-${currentSlide * 100}%)`;
+      }
+  
+  
+      next.addEventListener('click', () => {
+          currentSlide = (currentSlide + 1) % slides.length;
+          updateSlide();
+      });
+  
+      prev.addEventListener('click', () => {
+          currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+          updateSlide();
+      });
+  
+  
+      updateSlide();
+  
+    </script>
+</body>
+</html>

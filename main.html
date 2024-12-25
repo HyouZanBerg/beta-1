@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=none">
+  <title>Day 45 website</title>
+  <style>
+body {
+  font-family:verdana;
+  margin: 0px;
+  overflow-x:hidden;
+  overflow-y:scroll;
+  background-color:rgb(22, 22, 22);
+  height:100vh
+}
+.contain{
+  display:grid;
+  grid-template-areas: 
+    'header header header header header header'
+    'nav main main main main main'
+    'nav main main main main main';
+}
+.header{
+  grid-area:header;
+  background-color:rgb(230, 216, 216);
+  color:white;
+  height:14%;
+  width:100%;
+  position:fixed;
+  top:0;
+  z-index:1;
+}
+.simbol{
+  background-color:rgb(0, 0, 0) ;
+  color:rgb(214, 211, 207);
+  font-size: 12.4vh;
+  margin-top:-2.7vh;
+  padding-left: 1vh;
+  height:110%;
+  width:100%;
+  overflow-x:hidden;
+  overflow-y:hidden;
+  font-family:serif;
+  text-shadow: 4px 4px 3px rgb(42, 10, 100);
+}
+.koushiki{
+  cursor:pointer
+}
+.saito{
+   margin-left:2vh
+}
+.simbol::selection {
+    background-color: transparent;
+    color: rgb(255, 255, 255)
+}
+.simbol > span::selection {
+    background-color: transparent; 
+    color: rgb(255, 255, 255)
+}
+.ham-nav{
+  float:right;
+  position:absolute;
+  right:5vh;
+  cursor:pointer
+}
+.ham-content{
+  position:fixed;
+  width:88vh;
+  height:82vh;
+  background-color:rgb(14, 13, 13);
+  opacity:0.93;
+  z-index:3;
+  top:-110vh;
+  left:50vh; 
+  transition:0.4s ease-in-out;
+}
+#search{
+  margin:3px;
+  width:97%;
+  font-size:4vh
+}
+#listItem{
+  background-color:white;
+  margin-left:1vh;
+  height:86%;
+  overflow-y:scroll;
+  width:90%;
+  list-style:none;
+  font-size:1.4rem;
+}
+#listItem > li a{
+  text-decoration:none;
+  color:rgb(24, 23, 23);
+  font-family:Arial, Helvetica, sans-serif
+}
+#listItem > li a:hover{
+  color:rgb(105, 10, 179)
+}
+.yinyang{
+  float:right;
+  position:absolute;
+  right:40vh;
+  cursor:pointer
+}
+.se{
+  cursor:pointer;
+  float:right;
+  position:absolute;
+  right:24vh;
+  top:-4.4vh;
+  font-size:16vh;
+}
+.magContains{
+  position:fixed;
+  width:180px;
+  height:84px;
+  background-color:rgb(32, 32, 32);
+  right:-180px;
+  top:86px;
+  z-index:2;
+  overflow:hidden;
+  transition:0.04s ease-in
+}
+#magItem{
+  margin-top:0px;
+  list-style:none;
+  margin-left:-30px
+}
+#magItem > li a{
+  text-decoration:none;
+  color:rgb(209, 197, 197);
+  font-family:Arial, Helvetica, sans-serif
+}
+#magItem > li a:hover{
+  color:rgb(105, 37, 231)
+}
+.nav{
+  grid-area:nav;
+  height:84vh;
+  width:10%;
+  background-color:rgb(15, 14, 14);
+  position:fixed;
+  top:16%;;
+  display:none
+}
+.main{
+  grid-area:main;
+  width:99%;
+  height:90%;
+  background-color:inherit;
+  margin-top:6%;
+  z-index:-1
+}
+.slider {
+  width:96%;
+  margin-left:2%;
+  overflow: hidden;
+  height:100vh;
+  border:0.4vh solid rgb(200, 238, 243);
+  border-radius:1vh
+}
+
+.slides {
+  display: flex;
+  width:100%;
+  height:100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  font-size: 24px;
+  background-color:rgb(10, 9, 9);
+  box-sizing: border-box;
+  width:100%;
+  flex-shrink:0;
+  height:100%;
+}
+.slide > img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+
+}
+
+.prev {
+  left: 3%;
+  background-color: rgba(19, 18, 18, 0.6);
+  color: white;
+  position: absolute;
+  top: 50%;
+  border: none;
+  padding: 4vh 4vh;
+  cursor: pointer;
+  font-size: 4vh;
+}
+
+.next {
+  right: 4%;
+  background-color: rgba(19, 18, 18, 0.6);
+  color: white;
+  position: absolute;
+  top: 50%;
+  border: none;
+  padding: 4vh 4vh;
+  cursor: pointer;
+  font-size: 4vh;
+}
+
+.lightMode{
+  background-color:rgb(194, 187, 187)
+}
+.lightMode2{
+  background-color:rgb(224, 222, 221);
+  color:black;
+  text-shadow:3px 3px 3px rgb(78, 3, 78)
+}
+.lightMode21{
+  background-color:rgb(17, 17, 17);
+  color:black;
+}
+.lightMode3{
+  background-color:rgb(214, 214, 219);
+  color:black;
+  opacity:0.5
+}
+.lightMode4{
+  border:1.2vh solid rgb(90, 78, 78)
+}
+.lightmode5{
+  border-bottom:1.2vh solid black !important;
+}
+.page2 {
+  margin-left:2%;
+  width:86.5%;
+  margin-top:12%;
+  border-radius:1.5vh;
+  display:flex;
+  flex-flow: column wrap;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(135deg, rgba(250, 250, 248, 0.9), rgb(0, 253, 105));
+  color: white;
+  font-family: "Arial", sans-serif;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  padding: 10vh;
+  border-bottom:1.2vh solid aliceblue
+}
+
+.page2 h1 {
+  font-size: 11vh;
+  margin-bottom: 5vh;
+  text-shadow: 3px 3px 5px black;
+}
+
+.page2 p {
+  font-family:comic sans ms;
+  font-size: 6vh;
+  margin-top: 2vh;
+  line-height: 1.4;
+  max-width:150vh;
+}
+
+.page2 .cta {
+  margin-top: 6vh;
+  padding: 3vh 4vh;
+  font-size: 6vh;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.9);
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  border-radius: 8px;
+  transition: 0.2s ease-in;
+}
+
+.page2 .cta:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: black;
+  border-color: rgba(0, 0, 0, 0.7);
+}
+
+.page3{
+  margin-left:2%;
+  width:96%;
+  border-radius:1.5vh;
+  height:100vh;
+  margin-top: 12%;
+  background-image:linear-gradient(to right,rgb(0, 60, 255),red);
+  border-bottom:1.2vh solid aliceblue
+}
+.page3-asideR{
+  float:right;
+  margin-top:14vh;
+  margin-right:6vh;
+  background-color:black;
+  border-radius:100%;
+}
+.page3-asideR > img{
+  width:45vh;
+  border:5px solid rgb(137, 215, 243);
+  border-radius:38vh;
+}
+.page3-asideR > img:hover{
+  border:7px solid rgb(147, 217, 245);
+  opacity:0.3
+}
+.page3-asideL{
+  font-size:7vh;
+  margin-left:7vh;
+  padding-top:1vh;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  color:rgb(241, 241, 241)
+}
+.hyouzan{
+  color:azure
+}
+.yukihara{
+  color:skyblue
+}
+.page4{
+  width:100%;
+  height:90vh;
+  background-color: rgb(68, 64, 64);
+  border-bottom:1.2vh solid aliceblue
+}
+
+
+  </style>
+</head>
+<body> 
+    <div class="container">
+        <div class="header">
+            <div class="simbol">
+              <span class="koushiki">YukiHara公式</span><span class="saito"> ● サイト` </span>
+              <span class="se">⌕</span>
+              <span class="yinyang">☯</span>
+              <span class="ham-nav">☰</span>
+            </div>
+        </div>
+        <div class="nav"></div>
+        <div class="main">
+            <div class="ham-content">
+              <input type="text" name="search" id="search" placeholder="Search items...">
+              <ul id="listItem">
+                <li><a href="main.html">Main website</a></li>
+                <li><a href="none">item in list2</a></li>
+                <li><a href="none">item in list2</a></li>
+                <li><a href="none">item in list3</a></li>
+                <li><a href="none">item in list4</a></li>
+                <li><a href="none">item in list5</a></li>
+                <li><a href="none">item in list4</a></li>
+                <li><a href="none">item in list6</a></li>
+                <li><a href="none">item in list6</a></li>
+                <li><a href="none">item in list7</a></li>
+                <li><a href="none">item in list7</a></li>
+                <li><a href="none">item in list2</a></li>
+                <li><a href="none">item in list1</a></li>
+                <li><a href="none">item in list2</a></li>
+                <li><a href="none">item in list1</a></li>
+                <li><a href="none">item in list2</a></li>
+                <li><a href="none">item in list2</a></li>
+                <li><a href="none">item in list3</a></li>
+                <li><a href="none">item in list4</a></li>
+                <li><a href="none">item in list5</a></li>
+                <li><a href="none">item in list4</a></li>
+                <li><a href="none">item in list6</a></li>
+                <li><a href="none">item in list6</a></li>
+                <li><a href="none">item in list7</a></li>
+                <li><a href="none">item in list7</a></li>
+                <li><a href="none">item in list2</a></li>
+                <li><a href="none">item in list1</a></li>
+                <li><a href="none">item in list2</a></li>
+                <li><a href="none">item in list1</a></li>
+                <li><a href="none">item in list1</a></li>
+              </ul>
+            </div>
+            <div class="magContains">
+              <input id="magInput" type="text" placeholder="searching" name="magInput">
+              <ul id="magItem">
+                <li><a href="main.html">main website</a></li>
+                <li><a href="none">item in list2</a></li>
+                <li><a href="none">item in list2</a></li>
+                <li><a href="none">item in list3</a></li>
+                <li><a href="none">item in list4</a></li>
+                <li><a href="none">item in list5</a></li>
+                <li><a href="none">item in list4</a></li>
+                <li><a href="none">item in list6</a></li>
+                <li><a href="none">item in list6</a></li>
+                <li><a href="none">item in list7</a></li>
+                <li><a href="none">item in list7</a></li>
+                <li><a href="none">item in list2</a></li>
+                <li><a href="none">item in list1</a></li>
+                <li><a href="none">item in list2</a></li>
+                <li><a href="none">item in list1</a></li>
+              </ul>
+            </div>
+            <div class="slider">
+                <div class="slides">
+                  <div class="slide active"><img src="RobloxScreenShot20241114_211111548.png"></div>
+                  <div class="slide"><img src="RobloxScreenShot20241117_163436828.png"></div>
+                  <div class="slide"><img src="RobloxScreenShot20241122_191705752.png"></div>
+                  <div class="slide"><img src="RobloxScreenShot20241123_183452737.png"></div>
+                  <div class="slide"><img src="RobloxScreenShot20241122_191751114.png"></div>
+                  <div class="slide"><img src="RobloxScreenShot20241122_185127413.png"></div>
+                </div>
+                <button class="prev">❮ Prev</button>
+                <button class="next">Next ❯</button>
+              </div>
+            </div>
+            <div class="page2">
+              <h1>Welcome to My Long Journey!!</h1>
+              <p>
+                This is Day 45 of my web development journey.<br> I’ve learnt DOM, BOM, Async, and the last <b>API</b> in JavaScript. 
+                this is really a great experience for me, and I’m excited to share what I’ve created!
+              </p>
+              <a class="cta">See my current Project:(unavalaible)</a>
+            </div>
+            
+            <div class="page3">
+              <div class="page3-asideR"><img src="pfp.jpg">
+              </div>
+              <div class="page3-asideL">
+                <h1>This website was <br>
+                  created by :<br><br>
+                <span class="yukihara">雪原青葉❄</span>/<span class="hyouzan">氷山※</span>
+                </h1>
+              </div>
+            </div>
+            <div class="page4"></div>
+        </div>
+    </div>
+
+    <script>
+      const koushiki = document.getElementsByClassName("koushiki")[0];
+      koushiki.addEventListener('click',()=>{
+        open("index.html","_self")
+      })
+      //ham nav//
+      const hamNav = document.getElementsByClassName("ham-nav")[0];
+      const hamContent = document.getElementsByClassName('ham-content')[0];
+      hamNav.addEventListener('click',()=>{
+          if(hamContent.style.top == "-110vh"){
+            hamContent.style.top = "15vh"
+          }else{
+            hamContent.style.top = "-110vh"
+          }
+      })
+      const input = document.getElementById("search");
+      const listItems = document.querySelectorAll("#listItem li");
+  
+      input.addEventListener('input',()=>{
+        let searchs = input.value.toLowerCase();
+  
+        listItems.forEach(x => {
+          let text = x.textContent.toLowerCase();
+          x.style.display = text.includes(searchs) ? "" : "none"
+        })
+      })
+  
+      //untuk yin yang//
+      const trigger = document.getElementsByClassName("yinyang")[0];
+      let savedmode = localStorage.getItem("mode");
+      const header = document.getElementsByClassName("header")[0];
+      const simbol = document.getElementsByClassName("simbol")[0];
+      
+      trigger.addEventListener('click',()=>{
+        document.body.classList.toggle("lightMode");
+        header.classList.toggle("lightMode21")
+        simbol.classList.toggle("lightMode2")
+        document.getElementsByClassName("prev")[0].classList.toggle("lightMode3");
+        document.getElementsByClassName("next")[0].classList.toggle("lightMode3");
+        document.getElementsByClassName("slider")[0].classList.toggle("lightMode4");
+        document.getElementsByClassName("page2")[0].classList.toggle("lightmode5");
+        document.getElementsByClassName("page3")[0].classList.toggle("lightmode5");
+        document.getElementsByClassName("page4")[0].classList.toggle("lightmode5");
+        if(document.body.classList.contains("lightMode")){
+          localStorage.setItem("mode","light")
+        }else{
+          localStorage.setItem("mode","dark")
+        };
+      })
+      if(savedmode == "light"){
+        document.body.classList.add("lightMode");
+        header.classList.add("lightMode21");
+        simbol.classList.add("lightMode2");
+        document.getElementsByClassName("prev")[0].classList.add("lightMode3");
+        document.getElementsByClassName("next")[0].classList.add("lightMode3");
+        document.getElementsByClassName("slider")[0].classList.add("lightMode4");
+        document.getElementsByClassName("page2")[0].classList.add("lightmode5");
+        document.getElementsByClassName("page3")[0].classList.add("lightmode5");
+        document.getElementsByClassName("page4")[0].classList.add("lightmode5");
+  
+      }else{
+        document.body.classList.remove("lightMode");
+        header.classList.remove("lightMode21");
+        simbol.classList.remove("lightMode2");
+        document.getElementsByClassName("prev")[0].classList.remove("lightMode3");
+        document.getElementsByClassName("next")[0].classList.remove("lightMode3");
+        document.getElementsByClassName("slider")[0].classList.remove("lightMode4");
+        document.getElementsByClassName("page2")[0].classList.remove("lightmode5");
+        document.getElementsByClassName("page3")[0].classList.remove("lightmode5");
+        document.getElementsByClassName("page4")[0].classList.remove("lightmode5");
+  
+      }
+  
+      //untuk searching
+      const magnifying = document.getElementsByClassName("se")[0]; //tombol
+      const magContain = document.getElementsByClassName("magContains")[0] ; //kontainer//
+      const magInput = document.getElementById("magInput");//baru input
+      const magList = document.querySelectorAll("#magItem li");
+  
+      magnifying.addEventListener('click',()=>{
+        if(magContain.style.right ==  "-180px"){
+          magContain.style.right = "15px"
+        }else{
+          magContain.style.right = "-180px"
+        }
+      });
+  
+      magInput.addEventListener('input',()=>{
+        let search = magInput.value.toLowerCase();
+  
+        magList.forEach(li => {
+          let text = li.textContent.toLowerCase();
+          li.style.display = text.includes(search) ? "" : "none";
+        })
+        
+      })
+  
+      //slides
+          const slides = document.querySelectorAll('.slide');
+      const next = document.querySelector('.next');
+      const prev = document.querySelector('.prev');
+  
+      let currentSlide = 0;
+  
+      function updateSlide() {
+      
+          slides.forEach((slide, index) => {
+          slide.classList.toggle('active', index === currentSlide);
+          });
+    
+          document.querySelector('.slides').style.transform = `translateX(-${currentSlide * 100}%)`;
+      }
+  
+  
+      next.addEventListener('click', () => {
+          currentSlide = (currentSlide + 1) % slides.length;
+          updateSlide();
+      });
+  
+      prev.addEventListener('click', () => {
+          currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+          updateSlide();
+      });
+  
+  
+      updateSlide();
+  
+    </script>
+</body>
+</html>
