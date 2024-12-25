@@ -37,8 +37,13 @@ body {
   font-family:serif;
   text-shadow: 4px 4px 3px rgb(42, 10, 100);
 }
+#h{
+  margin-top:-1vh;
+  margin-left:-1.5vh;
+}
 .koushiki{
-  cursor:pointer
+  cursor:pointer;
+  letter-spacing:-1.1vh
 }
 .saito{
    margin-left:2vh
@@ -67,7 +72,7 @@ body {
   z-index:3;
   top:-110vh;
   left:50vh; 
-  transition:0.4s ease-in-out;
+  transition:0.1s ease-in
 }
 #search{
   margin:3px;
