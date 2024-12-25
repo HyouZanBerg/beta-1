@@ -17,7 +17,7 @@
     .header{
       grid-area:header;
       background-color:rgb(230, 217, 216);
-      color:white;
+      color:rgb(15, 15, 15);
       height:8.2%;
       width:100%;
       position:fixed;
@@ -26,7 +26,7 @@
     }
     .simbol{
       background-image: linear-gradient(to left,rgb(131, 127, 127),rgb(223, 216, 216));
-      color:rgb(214, 211, 207);
+      color:rgb(24, 23, 23);
       font-size: 5.6vh;
       height:110%;
       width:100%;
@@ -105,15 +105,15 @@
       position:absolute;
       right:11.5vh;
       cursor:pointer;
-      top:-0.15vh;
+      top:-0.22vh;
     }
     .se{
       cursor:pointer;
       float:right;
       position:absolute;
       right:6.4vh;
-      top:-3.3vh;
-      font-size:9.6vh
+      top:-3.1vh;
+      font-size:9.2vh
     }
     .magContains{
       position:fixed;
