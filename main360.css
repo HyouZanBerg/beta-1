@@ -119,11 +119,19 @@
     }
     .nav{
       grid-area:nav;
-      height:84vh;
-      width:13%;
-      background-color:rgb(15, 14, 14);
+      height:80vh;
+      width:60%;
+      background-color:rgb(173, 26, 26);
       position:fixed;
-      top:13%;
+      right:-37vh;
+      overflow-y:scroll;
+      top:9.1vh;
+    }
+    .nav::-webkit-scrollbar{
+      background-color:rgb(255, 173, 173)
+    }
+    .nav::-webkit-scrollbar-thumb{
+      background-color:red
     }
     .main{
       grid-area:main;
@@ -144,6 +152,6 @@
         background-color:rgb(255, 233, 233);
       }
       .lightModenav{
-        background-color:#23232E
+        background-color:#1f1fb4
       }
     }
