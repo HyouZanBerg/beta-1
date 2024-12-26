@@ -113,7 +113,7 @@
       position:absolute;
       right:6vh;
       top:-2.96vh;
-      font-size:8.4vh
+      font-size:8.8vh
     }
     .magContains{
       position:fixed;
@@ -237,7 +237,7 @@
     }
     .page2 {
       margin-left:1%;
-      width:87.5%;
+      width:86.5%;
       margin-top:18%;
       border-radius:1.5vh;
       display:flex;
@@ -338,7 +338,7 @@
     .page4 {
       margin-left:1%;
       height:70vh;
-      width:63%;
+      width:62%;
       margin-top:12%;
       border-radius:1.5vh;
       display:flex;
