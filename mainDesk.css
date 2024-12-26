@@ -93,14 +93,14 @@
     }
     #listItem > li a{
       text-decoration:none;
-      color:rgb(24, 23, 23);
       font-family:Arial, Helvetica, sans-serif;
       padding: 1vh; 
       display: block; 
+      color:rgb(24, 23, 23);
       transition: background-color 0.3s; 
     }
     #listItem > li a:hover{
-      color:rgb(105, 10, 179);
+      color:rgb(110, 110, 110);
       background-color: rgba(105, 10, 179, 0.1);
     }
     .yinyang{
@@ -118,14 +118,77 @@
       top:-5.5vh;
       font-size:16vh;
     }
+    .nav{
+      display:none
+    }
     .navd{
       grid-area:nav;
       height:86vh;
       width:13%;
-      background:F5F5F5;
+      background: linear-gradient(180deg,rgb(204, 203, 203),white);
+      border-right: 0.5vh solid rgba(105, 105, 105, 0.5);
       position:fixed;
       border-right:0.5vh solid rgb(105, 105, 105);
-      top:14%;;
+      top:14%;
+      overflow-y:scroll;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border-right: 1px solid rgba(255, 255, 255, 0.1)
+    }
+    .navdList{
+      width:100%;
+      margin-top:0vh;
+      list-style:none;
+      display:flex;
+      flex-flow: column;
+    }
+    .navdList > h3{
+      margin-top:1vh;
+      margin-left:-6vh;
+      margin-bottom:1vh;
+      font-size:3.7vh;
+      color:rgb(209, 209, 209);
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-shadow:2px 2px 3px black
+    }
+    .navdList > li{
+      margin-left:-5vh;
+      padding-right:3vh;
+      font-size:3.2vh;
+      letter-spacing:-0.2vh;
+      margin-top:0.5vh;
+      padding-left:0;
+    }
+    .navdList > li a{
+      text-decoration:none;
+      transition: all 0.3s ease-in-out;
+      color:rgb(39, 85, 104);
+      font-family:verdana
+    }
+    .navdList > li a.active {
+      font-weight: bold;
+      color: #007ACC; 
+      background-color: rgba(0, 122, 204, 0.1);
+      border-left: 4px solid #007ACC; 
+    }
+    .navdList > li a:hover{
+      color:rgb(87, 85, 85);
+      background-color:rgb(188, 239, 255);
+      border-left: 1vh solid rgb(105, 10, 179);
+      transform: scale(1.1);
+    }
+    .navd::-webkit-scrollbar{
+      width:0.8vh
+    }
+    .navd::-webkit-scrollbar-thumb{
+      background: rgb(99, 96, 116);
+      border-radius: 20px;
+    }
+    .navd::-webkit-scrollbar-thumb:hover {
+      background: rgb(244, 242, 247);
+    }
+    .navd::-webkit-scrollbar-track {
+      background: white;
+      border-radius: 10px;
     }
     .main{
       grid-area:main;
@@ -146,6 +209,7 @@
       background-color:rgb(255, 233, 233);
     }
     .lightModenav{
-      background-color:#23232E
+      background :linear-gradient(180deg, #161f29,rgb(17, 10, 32));
     }
+  
 }
