@@ -34,6 +34,7 @@
       overflow-y:hidden;
       font-family:serif;
       text-shadow:2px 2px 5px #CCCCCC;
+      border-bottom:1px solid black;
     }
     #h{
       left:-1vh;
@@ -120,11 +121,18 @@
     .nav{
       grid-area:nav;
       height:84vh;
-      width:10%;
+      width:60%;
       background-color:rgb(15, 14, 14);
       position:fixed;
-      top:13%;
-      display:none;
+      right:-37vh;
+      overflow-y:auto;
+      top:9.1vh;
+    }
+    .nav::-webkit-scrollbar{
+      background-color:rgb(255, 173, 173)
+    }
+    .nav::-webkit-scrollbar-thumb{
+      background-color:red
     }
     .main{
       grid-area:main;
