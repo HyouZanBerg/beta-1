@@ -27,7 +27,7 @@
     .simbol{
       background-image: linear-gradient(to right,#FFFFFF,#E6E6E6);
       color:#2C2C2C;
-      font-size: 6.5vh;
+      font-size: 5.5vh;
       height:110%;
       width:100%;
       overflow-x:hidden;
@@ -39,7 +39,7 @@
       left:-1vh;
       top:-1.4vh;
       position:absolute;
-      font-size:8vh;
+      font-size:5.6vh;
       width:41vh;
       letter-spacing:-0.85vh;
       height:100%;
@@ -63,7 +63,7 @@
       float:right;
       position:absolute;
       right:-0.5vh;
-      top:0.4vh;
+      top:2vh;
       cursor:pointer
     }
     .ham-content{
@@ -105,17 +105,17 @@
     .yinyang{
       float:right;
       position:absolute;
-      right:11.3vh;
+      right:9.3vh;
       cursor:pointer;
-      top:-0.55vh;
+      top:2.15vh;
     }
     .se{
       cursor:pointer;
       float:right;
       position:absolute;
-      right:6vh;
-      top:-2.96vh;
-      font-size:9.8vh
+      right:4vh;
+      top:-1.76vh;
+      font-size:7.8vh
     }
     .magContains{
       position:fixed;
@@ -162,7 +162,7 @@
     .slider {
       padding-top:1vh;
       background: linear-gradient(to right,red,orange);
-      width:99%;
+      width:96%;
       margin-left:0.3%;
       overflow: hidden;
       height:40vh;
@@ -211,7 +211,7 @@
     }
     
     .next {
-      right: 1%;
+      right: 5%;
       background-color: rgba(19, 18, 18, 0.6);
       color: white;
       position: absolute;
@@ -264,7 +264,7 @@
     
     .page2 h1 {
       margin:-10px;
-      margin-left:-26px;
+      margin-left:-56px;
       font-size: 5.6vh;
       letter-spacing:0.3vh;
       margin-bottom: 1vh;
@@ -278,6 +278,7 @@
       margin-top: 4vh;
       line-height: 1.1;
       max-width:150vh;
+      margin-left:-4vh
     }
     
     .page2 .cta {
@@ -289,6 +290,7 @@
       border: 2px solid rgba(255, 255, 255, 0.7);
       border-radius: 8px;
       transition: 0.2s ease-in;
+      margin-left:-9vh
     }
     
     .page2 .cta:hover {
@@ -364,7 +366,7 @@
     
     .page4 h1 {
       margin-top:-4vh;
-      margin-left:-6.4vh;
+      margin-left:-14.4vh;
       font-size:7vh;
       width:44vh;
       margin-bottom: 5vh;
@@ -372,7 +374,7 @@
     }
     
     .page4 h2 {
-      margin-left:-9vh;
+      margin-left:-11.4vh;
       font-family:comic sans ms;
       font-size: 5vh;
       margin-top: 1vh;
@@ -382,7 +384,7 @@
     
     .page4 .butto {
       margin-top: 64vh;
-      margin-left:-45vh;
+      margin-left:-58vh;
       padding: 4.5vh 1.4vh;
       font-size: 5vh;
       color: white;
