@@ -4,7 +4,7 @@
       margin: 0px;
       overflow-x:hidden;
       overflow-y:scroll;
-      background-image: linear-gradient(to right,rgb(179, 176, 176),rgb(90, 90, 90));
+      background-image: linear-gradient(to bottom,rgb(163, 159, 159),rgb(37, 37, 37));
       height:100vh
     }
     .contain{
@@ -25,7 +25,7 @@
       z-index:1;
     }
     .simbol{
-      background-image: linear-gradient(to left,rgb(131, 127, 127),rgb(223, 216, 216));
+      background-image: linear-gradient(to left,rgb(116, 114, 114),rgb(190, 188, 188));
       color:rgb(24, 23, 23);
       font-size: 5.6vh;
       height:110%;
@@ -41,7 +41,7 @@
       position:absolute;
       font-size:6.4vh;
       width:41vh;
-      letter-spacing:-0.8vh;
+      letter-spacing:-0.85vh;
       height:100%;
     }
     .koushiki{
@@ -103,17 +103,17 @@
     .yinyang{
       float:right;
       position:absolute;
-      right:11.5vh;
+      right:11.1vh;
       cursor:pointer;
-      top:-0.22vh;
+      top:-0.54vh;
     }
     .se{
       cursor:pointer;
       float:right;
       position:absolute;
-      right:6.4vh;
-      top:-3.1vh;
-      font-size:9.2vh
+      right:6vh;
+      top:-2.96vh;
+      font-size:8.4vh
     }
     .magContains{
       position:fixed;
@@ -158,11 +158,11 @@
       z-index:-1
     }
     .slider {
-      width:96%;
-      margin-left:2%;
+      width:99%;
+      margin-left:0.3%;
       overflow: hidden;
       height:40vh;
-      border:0.4vh solid rgb(200, 238, 243);
+      border:0.6vh solid rgb(3, 3, 3);
       border-radius:1vh
     }
     
@@ -189,25 +189,25 @@
     }
     
     .prev {
-      left: 3%;
+      left: 1%;
       background-color: rgba(19, 18, 18, 0.6);
       color: white;
       position: absolute;
-      top: 33%;
+      top: 36%;
       border: none;
-      padding: 2vh 1vh;
+      padding: 1.5vh 1vh;
       cursor: pointer;
       font-size: 4vh;
     }
     
     .next {
-      right: 4%;
+      right: 1%;
       background-color: rgba(19, 18, 18, 0.6);
       color: white;
       position: absolute;
-      top: 33%;
+      top: 36%;
       border: none;
-      padding: 2vh 1vh;
+      padding: 1.5vh 1vh;
       cursor: pointer;
       font-size: 4vh;
     }
@@ -218,7 +218,7 @@
     .lightMode2{
       background-image: linear-gradient(to right,rgb(19, 19, 19),rgb(0, 0, 0));
       color:rgb(247, 247, 247);
-      text-shadow:4px 4px 4px rgb(88, 2, 168)
+      text-shadow:3px 3px 2px rgb(88, 2, 168)
     }
     .lightMode21{
       background-color:rgb(17, 17, 17);
@@ -230,14 +230,14 @@
       opacity:0.5
     }
     .lightMode4{
-      border:1.2vh solid rgb(90, 78, 78)
+      border:0.4vh solid rgb(90, 78, 78)
     }
     .lightmode5{
       border-bottom:2vh solid black !important;
     }
     .page2 {
-      margin-left:2%;
-      width:86.5%;
+      margin-left:1%;
+      width:87.5%;
       margin-top:18%;
       border-radius:1.5vh;
       display:flex;
@@ -289,8 +289,8 @@
       border-color: rgba(0, 0, 0, 0.7);
     }
     .page3{
-      margin-left:2%;
-      width:96%;
+      margin-left:1%;
+      width:98%;
       border-radius:1.5vh;
       height:100vh;
       margin-top: 12%;
@@ -308,7 +308,7 @@
       border:5px solid rgb(137, 215, 243);
       border-radius:38vh;
       margin-top:2vh;
-      margin-left:8.2vh
+      margin-left:9.2vh
     }
     .page3-asideR > img:hover{
       border:7px solid rgb(147, 217, 245);
@@ -336,9 +336,9 @@
       display:none
     }
     .page4 {
-      margin-left:2%;
+      margin-left:1%;
       height:70vh;
-      width:60.5%;
+      width:63%;
       margin-top:12%;
       border-radius:1.5vh;
       display:flex;
@@ -378,6 +378,7 @@
       padding: 4.5vh 1.4vh;
       font-size: 5vh;
       color: white;
+      text-decoration:none;
       background-image:linear-gradient(to right,yellow,red);
       border: 2px solid rgba(255, 255, 255, 0.7);
       border-radius: 8px;
@@ -385,7 +386,7 @@
     }
     
     .page4 .butto:hover {
-      background-color: rgba(255, 181, 21, 0.993);
+      background-color: rgba(131, 131, 131, 0.993);
       color: black;
       border-color: rgba(0, 0, 0, 0.7);
     }
