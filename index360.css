@@ -27,7 +27,7 @@
     .simbol{
       background-image: linear-gradient(to left,rgb(131, 129, 129),rgb(179, 178, 178));
       color:rgb(24, 23, 23);
-      font-size: 5.2vh;
+      font-size: 5.5vh;
       height:110%;
       width:100%;
       overflow-x:hidden;
@@ -103,9 +103,9 @@
     .yinyang{
       float:right;
       position:absolute;
-      right:11.1vh;
+      right:11.3vh;
       cursor:pointer;
-      top:-0.56vh;
+      top:-0.55vh;
     }
     .se{
       cursor:pointer;
