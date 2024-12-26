@@ -117,21 +117,78 @@
       top:-2.96vh;
       font-size:8.8vh
     }
+    .navd{
+      display: none
+    }
     .nav{
       grid-area:nav;
       height:80vh;
       width:70%;
-      background-color:rgb(173, 26, 26);
+      background: linear-gradient(180deg,rgb(204, 203, 203),white);
       position:fixed;
       right:-44vh;
       overflow-y:scroll;
-      top:9.1vh;
+      top:9.4vh;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border-right: 1px solid rgba(255, 255, 255, 0.1);
+      overflow-x:hidden
+    }
+    .navList{
+      width:100%;
+      margin-top:0vh;
+      list-style:none;
+      display:flex;
+      flex-flow: column;
+
+    }
+    .navList > h3{
+      margin-top:1vh;
+      margin-left:-6vh;
+      margin-bottom:1vh;
+      font-size:3.7vh;
+      color:rgb(209, 209, 209);
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-shadow:2px 2px 3px black
+    }
+    .navList > li{
+      margin-left:-5vh;
+      padding-right:3vh;
+      font-size:4.2vh;
+      letter-spacing:-0.2vh;
+      margin-top:0.5vh;
+      padding-left:0;
+    }
+    .navList > li a{
+      text-decoration:none;
+      transition: all 0.3s ease-in-out;
+      color:rgb(39, 85, 104);
+      font-family:verdana
+    }
+    .navList > li a.active {
+      font-weight: bold;
+      color: #007ACC; 
+      background-color: rgba(0, 122, 204, 0.1);
+      border-left: 4px solid #007ACC; 
+    }
+    .navList > li a:hover{
+      color:rgb(87, 85, 85);
+      background-color:rgb(188, 239, 255);
+      border-left: 1vh solid rgb(105, 10, 179);
+      transform: scale(1.1);
     }
     .nav::-webkit-scrollbar{
-      background-color:rgb(255, 173, 173)
+      width:0.8vh
     }
     .nav::-webkit-scrollbar-thumb{
-      background-color:red
+      background: rgb(99, 96, 116);
+      border-radius: 20px;
+    }
+    .nav::-webkit-scrollbar-thumb:hover {
+      background: rgb(244, 242, 247);
+    }
+    .nav::-webkit-scrollbar-track {
+      background: white;
+      border-radius: 10px;
     }
     .main{
       grid-area:main;
