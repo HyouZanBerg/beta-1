@@ -57,13 +57,26 @@
             </div>        
         </div>
     </div>
+   
+    
 
     <script>
+
+      const hamButton = document.getElementsByClassName("ham-nav")[0];
+      hamButton.addEventListener('click',()=>{
+        if(nav.style.right == "-37vh"){
+          nav.style.right = "0vh"
+        }else if(nav.style.right != "-37vh"){
+          nav.style.right = "-37vh"
+      };
+      })
+
+
       const koushiki = document.getElementsByClassName("koushiki")[0];
       koushiki.addEventListener('click',()=>{
         open("index.html","_self")
       })
-      //ham nav//
+      //searc//
       const seNav = document.getElementsByClassName("se")[0];
       const seContent = document.getElementsByClassName('se-content')[0];
       seNav.addEventListener('click',()=>{
