@@ -35,7 +35,7 @@ body {
   overflow-x:hidden;
   overflow-y:hidden;
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  text-shadow: 2px 2px 5px rgb(92, 31, 196);
+  text-shadow: 2px 2px 5px rgb(161, 110, 248);
 }
 #h{
   margin-top:-1vh;
@@ -154,6 +154,7 @@ body {
   z-index:-1
 }
 .slider {
+  background:linear-gradient(to right,tomato,rgb(255, 174, 0));
   width:96%;
   margin-left:2%;
   overflow: hidden;
@@ -161,7 +162,12 @@ body {
   border:0.4vh solid rgb(200, 238, 243);
   border-radius:1vh
 }
-
+.head{
+  font-size:5.6vh;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  margin-top:-3vh;
+  text-shadow:1px 1px 2px rgb(235, 235, 235);
+}
 .slides {
   display: flex;
   width:100%;
