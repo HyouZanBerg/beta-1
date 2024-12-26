@@ -120,10 +120,10 @@
     .nav{
       grid-area:nav;
       height:80vh;
-      width:60%;
+      width:70%;
       background-color:rgb(173, 26, 26);
       position:fixed;
-      right:-37vh;
+      right:-44vh;
       overflow-y:scroll;
       top:9.1vh;
     }
