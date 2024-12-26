@@ -33,7 +33,7 @@
       overflow-x:hidden;
       overflow-y:hidden;
       font-family:serif;
-      text-shadow: 4px 4px 3px rgb(42, 10, 100);
+      text-shadow: 3px 2px 3px rgb(109, 64, 192);
     }
     #h{
       left:-1vh;
@@ -105,7 +105,7 @@
       position:absolute;
       right:11.1vh;
       cursor:pointer;
-      top:-0.54vh;
+      top:-0.56vh;
     }
     .se{
       cursor:pointer;
@@ -218,7 +218,7 @@
     .lightMode2{
       background-image: linear-gradient(to right,rgb(19, 19, 19),rgb(0, 0, 0));
       color:rgb(247, 247, 247);
-      text-shadow:3px 3px 2px rgb(88, 2, 168)
+      text-shadow:3px 3px 3px rgb(88, 2, 168)
     }
     .lightMode21{
       background-color:rgb(17, 17, 17);
